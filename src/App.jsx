@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
-
+import avatarImage from './assets/Ayeka.png'
+import ProfilePage from './components/ProfilePage'
 function App() {
-  const [count, setCount] = useState(0)
+const user = {
+ name: "Sakina Karimi",
+ username: "@saka145",
+ avatarImage:  Ayeka.png,
+ xp: 90,
+ lastActive: "Jun 1 2026",
+ streakDays: 3,
+ longestStreak: 1,
+ recentBadgesText: "No badges earned yet",
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+ personalInfo: {
+  Email: 'sakintuba145@gmail.com',
+  Gender: 'famle',
+  Country: 'Afghanistan',
+  "Province or State": 'Ghazni',
+  "Work Experience": '10',
+  "Date of birth": "9/1/1995",
+  "Online Portfolio Link": "N/A",
+  "Linkedin Link": "Sakina Karimi",
+  Languages: "Farsi,English,Urdo",
+  Bio: "Artist and Web devloper",
+ },
+ accountDetails: {
+  role: "Artist, Web developer & Mobile App Developer",
+  Status: "Active",
+  Verification: "Verified",
+
+ }
+}
+
+return(
+ <div className='page'>
+<ProfilePage user={user}></ProfilePage>
+ </div> 
+)
 }
 
 export default App
