@@ -1,12 +1,12 @@
 
 import './App.css'
-import avatarImage from './assets/Ayeka.png'
-import ProfilePage from './components/ProfilePage'
+import AyekaImage from "./assets/Ayeka.png"
+import ProfilePage from './components/ProfilePage.jsx'
 function App() {
 const user = {
  name: "Sakina Karimi",
  username: "@saka145",
- avatarImage:  Ayeka.png,
+ avatarImage:  AyekaImage,
  xp: 90,
  lastActive: "Jun 1 2026",
  streakDays: 3,
@@ -26,7 +26,7 @@ const user = {
   Bio: "Artist and Web devloper",
  },
  accountDetails: {
-  role: "Artist, Web developer & Mobile App Developer",
+  Role: "Artist, Web developer & Mobile App Developer",
   Status: "Active",
   Verification: "Verified",
 
