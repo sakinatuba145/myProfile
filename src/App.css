@@ -1,42 +1,244 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+* { box-sizing: border-box;}
+body {
+  margin: 0;
+  background:aqua;
+  color: #e5e7e5
+}
+.page {
+  min-height: 100vh;
+  padding: 24px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.layout {
+  max-width: 1100px;
+  margin: 0auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.topHeader {
+  background: linear-gradient(180deg, #1e293b 0%, #0f127a 100%);
+  border-radius: 20px;
+  padding: 42px;
+  border: 1px solid rgba(225, 225, 225, 0.05);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.topHeaderInner {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.avatarRing {
+  width: 150px;
+  height: 150px;
+  border-radius: 999;
+  padding: 6px;
+  background: #5b5cff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarCircle {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #0b1220;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.topHeaderContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profileName {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.05;
+  color: #ffffff;
+}
+
+.profileHandle {
+  margin: 10px 0 0 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #5b5cff;
+}
+
+.topHeaderButtons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+btnHeader {
+  border: none;
+  padding: 15px 25px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+
+}
+
+.btnHeader.primary {
+  background: #5b5cff;
+  color: #ffffff;
+}
+
+.btnHeader.ghost {
+  background: #eef2ff;
+  color: #3b5bff;
+}
+
+.avatarImageWrapper {
+  overflow: hidden;
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover
+}
+
+.btn {
+  border: 1px solid rgba(225,225,225,0.10);
+  padding: 10px 15px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  background: transparent;
+  color: #e5e7eb;
+}
+
+.btn.primary {
+  background: #5b5cff;
+  border-color: #5b5cff;
+  color: white;
+}
+
+.btn.ghost {
+  background: rgba(220,220,220,0.05);
 }
 
 .card {
-  padding: 2em;
+  background: rgba(250,250,250,0.05);
+  border: 1px solid rgba(230,230,230,0.09);
+  border-radius: 14px;
+  padding: 20;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
 }
 
-.read-the-docs {
-  color: #888;
+.statsGrid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
 }
+
+.statTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.statTitle {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: #94a3b8;
+}
+
+.statIcon {
+  opacity: 0.9;
+}
+
+.statValue {
+  margin-top: 12px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #6d6bff;
+}
+
+.statFooter {
+  margin: 10px 0 0 0;
+  color: #a7b0c0;
+  font-size: 12px;
+}
+
+.bottomGrid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 14px;
+}
+
+.cardTitle {
+  margin: 0 0 14px 0;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.row {
+ display: flex;
+ justify-content: space-between;
+ gap: 15px;
+ padding: 8px 0;
+ border-bottom: 1px solid rgba(250,250,250,0.05); 
+}
+
+.row:last-child {
+border-bottom: none;
+}
+
+.rowLabel {
+  color: #93a4b7;
+  font-size: 12px;
+}
+
+.rowValue {
+color: #e5e7eb;
+font-weight: 700;
+font-size: 12px;
+text-align: right;
+}
+
+.pill {
+ display: inline-block;
+ padding: 6px 10px;
+ border-radius: 999;
+ background: rgba(34, 19o, 95,0.25);
+ border: 1px solid rgba(35,190,95,0.15);
+ color: #34d399;
+ font-weight: 800; 
+}
+
+.verified {
+  color: #8b5cf6;
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  .statGrid {
+    grid-template-columns: 1fr;
+  }
+  .profileName {
+    font-size: 25px;
+  }
+}
+
+
