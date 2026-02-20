@@ -15,13 +15,13 @@ export default function ProfilePage({user}){
             <StatCard
             title="XP"
             bigValue={user.xp}
-            footerText={`Last Active:${user.lastActive}`}
+            footerText={`Last Active: ${user.lastActive}`}
             >   
             </StatCard>
                <StatCard
             title="STREAK"
             bigValue={`${user.streakDays} days`}
-            footerText={`Longest Streak:${user.longestStreak} days`}
+            footerText={`Longest Streak: ${user.longestStreak} days`}
             icon="🎶"
             >   
             </StatCard>
@@ -33,7 +33,7 @@ export default function ProfilePage({user}){
             >   
             </StatCard>
             </div> 
-            <div className="bottunGrid">
+            <div className="bottomGrid">
                 <PersonalInfoCard info={user.personalInfo}></PersonalInfoCard>
                 <AccountDetailsCard details={user.accountDetails}></AccountDetailsCard>
                 
