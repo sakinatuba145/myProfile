@@ -8,8 +8,7 @@ export default function AccountDetailsCard({details}){
     label="Role"
      value={details.Role}></Row>
     <Row 
-    label="Status" 
-    value={<span className="pill">Active</span>}></Row>
+    label="Status" value={<span className="pill">Active</span>}></Row>
     <Row label="Verification" value={<span className="verified">Verified</span>}></Row>
 </div>
         </div>
