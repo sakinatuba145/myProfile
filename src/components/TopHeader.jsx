@@ -1,9 +1,10 @@
-export default function TopHeader({name, username, avatarImage}){
+export default function 
+TopHeader({name, username, avatarImage}){
     return(
         <header className="topHeader">
           <div className="topHeaderInner">
-            <div className="avatarRing" style={{width: '100px', height: '100px',borderRedius:'50%', display: 'flex'}}>
-              <div className="avatarCircle avatarImageWrapper" style={{width: '90px', height: '90px', borderRedius: '50%',overflow: 'hidden'}}>
+            <div className="avatarRing">
+              <div className="avatarCircle avatarImageWrapper">
                 <img src={avatarImage} alt={name} className="avatarImage" />
               </div>
             </div>
@@ -17,5 +18,5 @@ export default function TopHeader({name, username, avatarImage}){
          </div> 
          </div> 
         </header>
-    )
+    );
 }
