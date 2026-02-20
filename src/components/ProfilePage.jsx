@@ -36,10 +36,9 @@ export default function ProfilePage({user}){
             <div className="bottomGrid">
                 <PersonalInfoCard info={user.personalInfo}></PersonalInfoCard>
                 <AccountDetailsCard details={user.accountDetails}></AccountDetailsCard>
-                
-
             </div>
         </div>
+        
        
     );
 }
