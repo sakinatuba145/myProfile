@@ -1,10 +1,12 @@
-export default function Badge({ label, value }) {
+export default function Badge({ label, value , icon}) {
   return (
     
     <div className="badge">
-      <span className="badgeLabel">{label}:</span>
+        {icon && <span className="badgeIcon">{icon}</span>}
+        <div className="badgeContent">
+   <span className="badgeLabel">{label}</span>
       <span className="badgeValue">{value}</span>
-    
+        </div>
     </div>
   );
 }
