@@ -1,8 +1,10 @@
 
+
 import './App.css'
-import Badge from "./components/Badge.jsx";
-import AyekaImage from "./assets/Ayeka.png"
+import BadgeContainer from './components/BadgeContainer.jsx';
 import ProfilePage from './components/ProfilePage.jsx'
+import AyekaImage from "./assets/Ayeka.png"
+
   export default function App() {
 const user = {
  name: "Sakina Karimi",
@@ -31,20 +33,23 @@ const user = {
   Status: "Active",
   Verification: "Verified",
 
- }
+ },
 };
 
-return(
- <div className='page'>
-<ProfilePage user={user}></ProfilePage>
-      <h1>Reusable Badge Component</h1>
-      <Badge label="Course" value="React" />
-      <Badge label="role" value="Studentt"/>
-      <Badge label="duration" value="six month"/>
-      <Badge label="Score" value="+A"/>
-      <Badge label="Week" value="1" />
-      <Badge label="Topic" value="Props" />
-      <Badge label="Level" value="Beginner" />
+const badges = [
+  { label: "Course", value: "React", icon: "🎓" },
+  { label: "Role", value: "Student", icon: "🧑‍🎓" },
+  { label: "Duration", value: "6 Months", icon: "⏳" },
+  { label: "Score", value: "A+", icon: "⭐" },
+  { label: "Week", value: "1", icon: "📅" },
+  { label: "Topic", value: "Props", icon: "📌" },
+  { label: "Level", value: "Beginner", icon: "🥇" },
+];
+
+  return (
+    <div className="page">
+        <ProfilePage user={user}/>
+      <BadgeContainer badges={badges} />
     </div>
   );
 }
