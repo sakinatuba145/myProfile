@@ -1,5 +1,6 @@
 import Row from './Row'
-export default function PersonalInfoCard({info}){
+export default function
+ PersonalInfoCard({info}){
     return (
         <div className="card infoCard">
             <h2 className="cardTitle"> Personal Information</h2>
@@ -12,5 +13,5 @@ export default function PersonalInfoCard({info}){
                 }
             </div>
         </div>
-    )
+    );
 }
