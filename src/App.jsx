@@ -1,8 +1,9 @@
 
 import './App.css'
+import Badge from "./components/Badge.jsx";
 import AyekaImage from "./assets/Ayeka.png"
 import ProfilePage from './components/ProfilePage.jsx'
-function App() {
+  export default function App() {
 const user = {
  name: "Sakina Karimi",
  username: "@saka145",
@@ -31,13 +32,19 @@ const user = {
   Verification: "Verified",
 
  }
-}
+};
 
 return(
  <div className='page'>
 <ProfilePage user={user}></ProfilePage>
- </div> 
-)
+      <h1>Reusable Badge Component</h1>
+      <Badge label="Course" value="React" />
+      <Badge label="role" value="Studentt"/>
+      <Badge label="duration" value="six month"/>
+      <Badge label="Score" value="+A"/>
+      <Badge label="Week" value="1" />
+      <Badge label="Topic" value="Props" />
+      <Badge label="Level" value="Beginner" />
+    </div>
+  );
 }
-
-export default App
